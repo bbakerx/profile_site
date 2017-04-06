@@ -1,6 +1,9 @@
 # profile_site
 A profile page
 
+
+I have an existing profile site that could use some javascript. A perfect thing to use for this assigment. 
+
 assignment - 
 
 - Set up github project
