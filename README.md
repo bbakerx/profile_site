@@ -15,13 +15,13 @@ assignment -
 how to make a server with node --
 
 
-create a repo 
-clone your repo
-nam init
-Install express, “nam install express —save
-create app.js
-set up your application with express. (expressjs.com)
-set up express static in public/
-create public/index.html with “hello world”
+- create a repo 
+- clone your repo
+- npm init
+- Install express, “npm install express —save
+- create app.js
+- set up your application with express. (expressjs.com)
+- set up express static in public/
+- create public/index.html with “hello world”
 
 
