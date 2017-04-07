@@ -1,7 +1,3 @@
-$("#gallery li img").hover(function(){
-    $('#main-img').attr('src',$(this).attr('src').replace('thumb/', ''));
-});
-
 $(document).ready(function() {
     // Image swap on hover
     $("#gallery li img").hover(function(){
