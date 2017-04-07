@@ -1,13 +1,22 @@
+$("#gallery li img").hover(function(){
+    $('#main-img').attr('src',$(this).attr('src').replace('thumb/', ''));
+});
 
-
-
-var myImage = document.querySelector('img');
-
-myImage.onclick = function() {
-    var mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/webdevelopment.jpg') {
-      myImage.setAttribute ('src','images/brian_baker_drums.jpg');
-    } else {
-      myImage.setAttribute ('src','images/webdevelopment.jpg');
-    }
+$(document).ready(function() {
+    // Image swap on hover
+    $("#gallery li img").hover(function(){
+        $('#main-img').attr('src',$(this).attr('src').replace('thumb/', ''));
+    });
+    // Image preload
+    var imgSwap = [];
+     $("#gallery li img").each(function(){
+        imgUrl = this.src.replace('thumb/', '');
+        imgSwap.push(imgUrl);
+    });
+    $(imgSwap).preload();
+});
+$.fn.preload = function() {
+    this.each(function(){
+        $('<img/>')[0].src = this;
+    });
 }
