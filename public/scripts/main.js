@@ -1,18 +1,15 @@
-$(document).ready(function() {
-    // Image swap on hover
-    $("#gallery li img").hover(function(){
-        $('#main-img').attr('src',$(this).attr('src').replace('thumb/', ''));
-    });
-    // Image preload
-    var imgSwap = [];
-     $("#gallery li img").each(function(){
-        imgUrl = this.src.replace('thumb/', '');
-        imgSwap.push(imgUrl);
-    });
-    $(imgSwap).preload();
-});
-$.fn.preload = function() {
-    this.each(function(){
-        $('<img/>')[0].src = this;
-    });
+var today = new Date();
+var hourNow = today.getHours();
+var greeting;
+
+if (hourNow > 18){
+  greeting = 'Good evening!';
+} else if (hourNow > 12) {
+  greeting = 'Good afternoon!';
+}  else if (hourNow > 0) {
+  greeting = 'Good morning!';
+} else  {
+  greeting = 'Welcome!';
 }
+
+document.write('<h3>' + greeting + '</h3>');
